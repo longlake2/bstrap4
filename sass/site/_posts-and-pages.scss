@@ -77,5 +77,16 @@
 	}
 }
 
+.site-content {
+  @include make-row();
+
+  .content-area {
+    @include make-col(9);
+  }
+
+  .widget-area {
+    @include make-col(3);
+  }
+}
 
 
