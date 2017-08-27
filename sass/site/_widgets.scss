@@ -18,6 +18,7 @@
 	.textwidget,
 	.calendar_wrap {
 		padding: $card-spacer-x;
+		 @extend .card-body;
 	}
 
 	ul{
@@ -33,4 +34,17 @@
 	.tagcloud a {
 		margin-bottom: .5rem;
 	}
+
+	table {
+    width: 100%;
+    max-width: 100%;
+  }
+
 }
+
+
+
+
+ 
+
+ 

@@ -9,10 +9,11 @@ function bstrap4_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'bstrap4' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'bstrap4' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="card widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="card-header"><h3 class="card-header widget-title">',
+		'after_title'   => '</h3></div>',
 	) );
 }
 add_action( 'widgets_init', 'bstrap4_widgets_init' );
+

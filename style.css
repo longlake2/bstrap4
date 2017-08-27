@@ -5375,7 +5375,9 @@ tbody.collapse.show {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
 
-.card-body {
+.card-body, .widget .tagcloud,
+.widget .textwidget,
+.widget .calendar_wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -11375,6 +11377,9 @@ a.text-dark:focus, a.text-dark:hover {
     border: none; }
   .widget .tagcloud a {
     margin-bottom: .5rem; }
+  .widget table {
+    width: 100%;
+    max-width: 100%; }
 
 /*--------------------------------------------------------------
 ## Header
