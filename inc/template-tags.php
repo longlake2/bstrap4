@@ -36,7 +36,12 @@ if ( ! function_exists( 'bstrap4_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+
+
+		echo '<span class="posted-on"><i class="fa fa-calendar" aria-hidden="true"></i>' . $posted_on . '</span><span class="byline"><i class="fa fa-user" aria-hidden="true"></i> ' . $byline . '</span>'; 
+
+		// WPCS: XSS OK.
 
 	}
 endif;
@@ -52,35 +57,23 @@ if ( ! function_exists( 'bstrap4_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'bstrap4' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bstrap4' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links"><i class="fa fa-folder-open" aria-hidden="true"></i>' . esc_html__( 'Posted in %1$s', 'bstrap4' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'bstrap4' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bstrap4' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links"><i class="fa fa-tags" aria-hidden="true"></i>' . esc_html__( 'Tagged %1$s', 'bstrap4' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bstrap4' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
-		}
+    echo '<span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
+    /* translators: %s: post title */
+    comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bstrap4' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+    echo '</span>';
+  }
 
 		edit_post_link(
 			sprintf(

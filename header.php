@@ -23,9 +23,13 @@
 <div id="page" class="site">
 	
 <header id="masthead" class="site-header" role="banner">
-	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- ******************* The Navbar Area ******************* -->
+	
+      <div class="container">
+	    <nav class="navbar navbar-expand-lg navbar bg-light
+	    ">
 	    	<div class="container">
-			   <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+			   <a class="navbar-brand mb-0"  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -46,6 +50,9 @@
 
 	        </div>
 		</nav>
+	  
+    </div>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
