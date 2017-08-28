@@ -11,17 +11,17 @@
 
 ?>
     
-	</div><!-- #content -->
+	</div><!--  #content.site  -->
 
 	
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
-			<div class="site-info">
-				&copy; <?php bloginfo( 'name' );
-						echo ' - ';
-						echo date("Y"); ?>
-			</div><!-- .site-info -->
-		</div><!--  .container -->
+    <div class="container">
+  		<div class="site-info">
+  			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bstrap4' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bstrap4' ), 'WordPress' ); ?></a>
+  			<span class="sep"> | </span>
+  			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'BStrap4' ), 'bstrap4', '<a href="http://cafinity.com" rel="designer">Mike Hart</a>' ); ?>
+  		</div><!-- .site-info -->
+    </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
@@ -29,3 +29,4 @@
 
 </body>
 </html>
+

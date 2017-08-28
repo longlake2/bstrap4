@@ -58,6 +58,9 @@
   }
 }
 
+
+
+
 /* Posts Navigation */
 .nav-links {
 	display: flex;
@@ -80,6 +83,8 @@
 .site-content {
   @include make-row();
 
+  word-break: break-word; 
+  
   .content-area {
     @include make-col(9);
   }

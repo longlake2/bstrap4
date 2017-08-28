@@ -32,6 +32,8 @@
 	}
 
 	.tagcloud a {
+	@extend .btn;
+    @extend .btn-secondary;
 		margin-bottom: .5rem;
 	}
 

@@ -23,6 +23,8 @@
 		</div><!--  .post-thumbnail -->
 	<?php endif; ?>
 
+	<div class="card">
+<div class="card-body">
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -56,4 +58,6 @@
 	<footer class="entry-footer">
 		<?php bstrap4_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	</div> <!--card-body-->
+	</div> <!--card-->
 </article><!-- #post-## -->

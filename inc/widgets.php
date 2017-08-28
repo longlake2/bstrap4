@@ -11,8 +11,8 @@ function bstrap4_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'bstrap4' ),
 		'before_widget' => '<section id="%1$s" class="card widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<div class="card-header"><h3 class="card-header widget-title">',
-		'after_title'   => '</h3></div>',
+		'before_title'  => '<div class="card-header"><h4 class="card-title widget-title">',
+		'after_title'   => '</h4></div>',
 	) );
 }
 add_action( 'widgets_init', 'bstrap4_widgets_init' );
