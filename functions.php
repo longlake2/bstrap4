@@ -85,6 +85,19 @@ add_action( 'after_setup_theme', 'bstrap4_content_width', 0 );
 
 
 /**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		) );
+
+
+/**
  * Editing the Tag Widget
  */
 function my_widget_tag_cloud_args( $args ) {

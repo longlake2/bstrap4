@@ -22,13 +22,27 @@
 <body <?php body_class(); ?>
 <div id="page" class="site">
 	
-<header id="masthead" class="site-header" role="banner">
+<header class="site-header" role="banner">
 <!-- ******************* The Navbar Area ******************* -->
 	
       <div class="container">
-	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(0,0,0,0.03)">
 	    
 	    	<div class="container">
+	    	<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) : ?>
+				
+			<?php else : ?>
+		
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></p>
+			<?php
+			endif;
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
 			   <a class="navbar-brand mb-0"  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
