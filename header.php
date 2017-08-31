@@ -25,10 +25,10 @@
 <header class="site-header" role="banner">
 <!-- ******************* The Navbar Area ******************* -->
 	
-      <div class="container">
+  
 	    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(0,0,0,0.03)">
 	    
-	    	<div class="container">
+	    	
 	    	<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) : ?>
@@ -62,10 +62,10 @@
 	            ?>
 	          </div>
 
-	        </div><!--container-->
+	        <!--container-->
 		</nav>
 	  
-    </div> <!--container-->
+   <!--container-->
 
 	</header><!-- #masthead -->
 
