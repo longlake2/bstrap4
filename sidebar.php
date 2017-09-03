@@ -8,8 +8,7 @@
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) { ?>
-		</div><!--  .row -->
-	</div><!--  .container -->
+		
 	
 <?php } ?>
 

@@ -15,11 +15,22 @@ function bstrap4_widgets_init() {
 		'after_title'   => '</h4></div>',
 	) );
 
+/** register_sidebar(array(
+    'name' => esc_html__('Jumbotron Footer, bstrap4'),
+    'id' => 'jumbo-footer',
+    'description'   => esc_html__( 'Add widgets here.', 'bstrap4' ),
+    'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ) );
+**/
+
 
 register_sidebar( array(
 		'name'          => __( 'Jumboton Column 1', 'bstrap4' ),
 		'id'            => 'jumbotron-col1',
-		'description'   => '',
+		'description'   => esc_html__( 'Add widgets here.', 'bstrap4' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s"><div class="card widget-bak">',
 		'after_widget'  => '</div></aside>',
 		'before_title'  => ' <div class="card-header"><h4 class="card-title">',
@@ -29,7 +40,7 @@ register_sidebar( array(
 	register_sidebar( array(
 		'name'          => __( 'Jumboton Column 2', 'bstrap4' ),
 		'id'            => 'jumbotron-col2',
-		'description'   => '',
+		'description'   => esc_html__( 'Add widgets here.', 'bstrap4' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s"><div class="card widget-bak">',
 		'after_widget'  => '</div></aside>',
 		'before_title'  => ' <div class="card-header"><h4 class="card-title">',
@@ -39,7 +50,7 @@ register_sidebar( array(
 	register_sidebar( array(
 		'name'          => __( 'Jumboton Column 3', 'bstrap4' ),
 		'id'            => 'jumbotron-col3',
-		'description'   => '',
+		'description'   => esc_html__( 'Add widgets here.', 'bstrap4' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s"><div class="card card widget-bak">',
 		'after_widget'  => '</div></aside>',
 		'before_title'  => ' <div class="card-header"><h4 class="card-title">',
