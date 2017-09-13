@@ -15,6 +15,7 @@ function bstrap4_widgets_init() {
 		'after_title'   => '</h4></div>',
 	) );
 
+
 /** register_sidebar(array(
     'name' => esc_html__('Jumbotron Footer, bstrap4'),
     'id' => 'jumbo-footer',
@@ -25,8 +26,6 @@ function bstrap4_widgets_init() {
     'after_title' => '</h4>',
   ) );
 **/
-
-
 register_sidebar( array(
 		'name'          => __( 'Jumboton Column 1', 'bstrap4' ),
 		'id'            => 'jumbotron-col1',
@@ -36,7 +35,6 @@ register_sidebar( array(
 		'before_title'  => ' <div class="card-header"><h4 class="card-title">',
 		'after_title'   => '</h4></div>',
 	) );
-
 	register_sidebar( array(
 		'name'          => __( 'Jumboton Column 2', 'bstrap4' ),
 		'id'            => 'jumbotron-col2',
@@ -46,7 +44,6 @@ register_sidebar( array(
 		'before_title'  => ' <div class="card-header"><h4 class="card-title">',
 		'after_title'   => '</h4></div>',
 	) );
-
 	register_sidebar( array(
 		'name'          => __( 'Jumboton Column 3', 'bstrap4' ),
 		'id'            => 'jumbotron-col3',
@@ -56,7 +53,19 @@ register_sidebar( array(
 		'before_title'  => ' <div class="card-header"><h4 class="card-title">',
 		'after_title'   => '</h4></div>',
 	) );
-
 }
 add_action( 'widgets_init', 'bstrap4_widgets_init' );
 
+
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Left Sidebar',
+		'id' => 'left-sidebar',
+		'description' => esc_html__( 'Add widgets here.', 'bstrap4' ),
+		'before_widget' => '<li id="%1$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	));
+}

@@ -143,3 +143,8 @@ require get_template_directory() . '/inc/bootstrap-walker.php';
  * Bootstrap Walker.
  */
 require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
+
+/**
+ * tgm plug in activation
+ */
+require get_template_directory() . '/inc/tgm-plugin-activation.php';
