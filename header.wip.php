@@ -16,25 +16,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-	<?php wp_head("hero"); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>
-
 <div id="page" class="site">
 	
-<header class="site-header" role="banner" 
+<header class="site-header" role="banner">
 
->
-
-
-
+<div class="container image-fluid">
+<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+   </div>
 <!-- ******************* The Navbar Area ******************* -->
-	<div class="container">
-		<div class="row">
+	
   
 	    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(0,0,0,0.03)">
-	    
+	   <div class="container">
+   
 	    	
 	    	<?php
 			the_custom_logo();
@@ -68,25 +66,14 @@
 	            }
 	            ?>
 	          </div>
-	              </div>
-	                  </div>
 
 
-	        <!--container-->
+</div>
+	     <!--container-->
 		</nav>
-
-<div class="container">
-    <div class="jumbotron">
-      
-        <h1 class="display-3">Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div><!--jumbotron-->
-    </div><!--container-->
-
 	  
    <!--container-->
 
 	</header><!-- #masthead -->
 
-	
+	<div id="content" class="site-content">

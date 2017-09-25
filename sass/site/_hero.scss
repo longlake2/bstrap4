@@ -1,0 +1,14 @@
+.sp-hero {
+  min-height: 500px;
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  
+  h1 {
+    color: $white;
+    text-align: center;
+    padding-top: 40px;
+  }
+}
